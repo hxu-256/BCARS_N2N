@@ -1,6 +1,6 @@
-.pickle
-.log
-.npz
-.npy
-.h5
+*.pickle
+*.log
+*.npz
+*.npy
+*.h5
 data/
