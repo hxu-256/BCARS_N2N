@@ -6,7 +6,7 @@ from utils.datagen import create_spend_patches
 DATA_FOLDER = "./data/preprocessed"
 OUT_DIR = "./data"
 os.makedirs(OUT_DIR, exist_ok=True)
-DATASET_PATH = os.path.join(OUT_DIR, "patches_all.npz")
+DATASET_PATH = os.path.join(OUT_DIR, "training_merged_wpermuted_20251111.npz")
 
 def h5_to_patches(h5_path, patch_size=(32,32,96), stride=(16,16,48)):
     with h5py.File(h5_path, 'r') as f:
@@ -32,7 +32,7 @@ def h5_to_patches(h5_path, patch_size=(32,32,96), stride=(16,16,48)):
         # ----- patching pipeline -----
         X, Y = create_spend_patches(
             raw=ratio_selected,
-            permute_axis=0,               # (y,x,w) axis
+            permute_axis=2,               # (y,x,w) axis
             patch_size=patch_size,
             stride=stride,
             flip=True,

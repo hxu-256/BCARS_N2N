@@ -4,4 +4,5 @@
 *.npy
 *.h5
 data/
-model/
+*.tiff
+models/
