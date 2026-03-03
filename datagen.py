@@ -3,17 +3,17 @@ import os, glob, h5py, numpy as np
 from lazy5.inspect import get_attrs_dset
 from utils.datagen import create_spend_patches
 
-DATA_FOLDER = "./data/preprocessed"
-OUT_DIR = "./data"
+DATA_FOLDER = os.path.expanduser("~/scratch/n2n_data/20260209")
+OUT_DIR = DATA_FOLDER
 os.makedirs(OUT_DIR, exist_ok=True)
-DATASET_PATH = os.path.join(OUT_DIR, "training_merged_wpermuted_20251111.npz")
+DATASET_PATH = os.path.join(OUT_DIR, "training_merged_wpermuted_20260302_PACE.npz")
 
 def h5_to_patches(h5_path, patch_size=(32,32,96), stride=(16,16,48)):
     with h5py.File(h5_path, 'r') as f:
-        raw_ratio = f['preprocessed_images/medfilter_ratio']  # adjust if needed
+        raw_ratio = f['preprocessed_images/nofilter_ratio']  # adjust if needed
 
         # ----- wavenumber selection -----
-        attrs = get_attrs_dset(f, 'preprocessed_images/medfilter_ratio')
+        attrs = get_attrs_dset(f, 'preprocessed_images/nofilter_ratio')
         coeffs = attrs['Calib.a_vec']
         n_pix  = 2304
         ctr    = attrs['Calib.ctr_wl0']
@@ -21,11 +21,11 @@ def h5_to_patches(h5_path, patch_size=(32,32,96), stride=(16,16,48)):
         converted_nm = np.polyval(coeffs, np.arange(n_pix)) * 1e-7
         wn = 1/converted_nm - 1/probe
 
-        slow_axis_start = 24
-        fast_axis_start = 140
+        slow_axis_start = 0
+        fast_axis_start = 0
         ratio = raw_ratio[slow_axis_start:,:,:]
         fast_axis_end = fast_axis_start + ratio.shape[0]
-        wn_mask = (wn >= 400) & (wn <= 1800)
+        wn_mask = (wn >= 400) & (wn <= 3400)
         indices = np.where(wn_mask)[0]
         ratio_selected = ratio[:, fast_axis_start:fast_axis_end, indices]
 

@@ -1,0 +1,887 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Denoising Hyperspectral Images from Broadband Coherent Anti-Stokes\nRaman Scattering Microscopy",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          83.671875,
+          105.9219970703125
+        ],
+        [
+          526.7039794921875,
+          105.9219970703125
+        ],
+        [
+          526.7039794921875,
+          138.201171875
+        ],
+        [
+          83.671875,
+          138.201171875
+        ]
+      ]
+    },
+    {
+      "title": "Haoyu Xu\nGeorgia Institute of Technology",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          133.875,
+          163.1953125
+        ],
+        [
+          288.02288818359375,
+          163.1953125
+        ],
+        [
+          288.02288818359375,
+          189.5594482421875
+        ],
+        [
+          133.875,
+          189.5594482421875
+        ]
+      ]
+    },
+    {
+      "title": "Keyi Han\nGeorgia Institute of Technology",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          323.033203125,
+          163.1953125
+        ],
+        [
+          476.65887451171875,
+          163.1953125
+        ],
+        [
+          476.65887451171875,
+          189.5594482421875
+        ],
+        [
+          323.033203125,
+          189.5594482421875
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          153.298828125,
+          232.4891357421875
+        ],
+        [
+          198.8682861328125,
+          232.4891357421875
+        ],
+        [
+          198.8682861328125,
+          244.4443359375
+        ],
+        [
+          153.298828125,
+          244.4443359375
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          58.499977111816406,
+          524.77734375
+        ],
+        [
+          135.3360595703125,
+          524.77734375
+        ],
+        [
+          135.3360595703125,
+          537.8201293945312
+        ],
+        [
+          58.499977111816406,
+          537.8201293945312
+        ]
+      ]
+    },
+    {
+      "title": "2. Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          57.673828125,
+          72.31640625
+        ],
+        [
+          141.612548828125,
+          72.31640625
+        ],
+        [
+          141.612548828125,
+          84.7423095703125
+        ],
+        [
+          57.673828125,
+          84.7423095703125
+        ]
+      ]
+    },
+    {
+      "title": "2.1. Denoising Methods for CRI",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          57.673828125,
+          92.42578125
+        ],
+        [
+          206.77392578125,
+          92.42578125
+        ],
+        [
+          206.77392578125,
+          103.61566162109375
+        ],
+        [
+          57.673828125,
+          103.61566162109375
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Noise2Noise Model",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          316.458984375,
+          175.18359375
+        ],
+        [
+          425.611572265625,
+          175.18359375
+        ],
+        [
+          425.611572265625,
+          186.67364501953125
+        ],
+        [
+          316.458984375,
+          186.67364501953125
+        ]
+      ]
+    },
+    {
+      "title": "3. Results",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          58.271484375,
+          549.52734375
+        ],
+        [
+          107.6478271484375,
+          549.52734375
+        ],
+        [
+          107.6478271484375,
+          562.9681549072266
+        ],
+        [
+          58.271484375,
+          562.9681549072266
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Method and Noise Characterization",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          314.96484375,
+          358.9946594238281
+        ],
+        [
+          504.14306640625,
+          358.9946594238281
+        ],
+        [
+          504.14306640625,
+          369.95355224609375
+        ],
+        [
+          314.96484375,
+          369.95355224609375
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Denoising Glycerol Reference",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          58.5,
+          530.2345275878906
+        ],
+        [
+          216.06707763671875,
+          530.2345275878906
+        ],
+        [
+          216.06707763671875,
+          541.1934356689453
+        ],
+        [
+          58.5,
+          541.1934356689453
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Denoising Microsphere Beads",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          314.96484375,
+          566.0525512695312
+        ],
+        [
+          475.45269775390625,
+          566.0525512695312
+        ],
+        [
+          475.45269775390625,
+          577.0114440917969
+        ],
+        [
+          314.96484375,
+          577.0114440917969
+        ]
+      ]
+    },
+    {
+      "title": "3.4. Biological Validation on C. elegans",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          315.5625,
+          455.8206787109375
+        ],
+        [
+          493.4371643066406,
+          455.8206787109375
+        ],
+        [
+          493.4371643066406,
+          466.7795715332031
+        ],
+        [
+          315.5625,
+          466.7795715332031
+        ]
+      ]
+    },
+    {
+      "title": "4. Conclusion",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          58.271484375,
+          527.3790893554688
+        ],
+        [
+          127.58911895751953,
+          527.3790893554688
+        ],
+        [
+          127.58911895751953,
+          539.3343048095703
+        ],
+        [
+          58.271484375,
+          539.3343048095703
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          316.458984375,
+          95.820068359375
+        ],
+        [
+          372.7938537597656,
+          95.820068359375
+        ],
+        [
+          372.7938537597656,
+          107.7752685546875
+        ],
+        [
+          316.458984375,
+          107.7752685546875
+        ]
+      ]
+    },
+    {
+      "title": "Denoising Hyperspectral Images from Broadband Coherent Anti-Stokes\nRaman Scattering Microscopy",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          84.8671875,
+          69.99609375
+        ],
+        [
+          527.1328125,
+          69.99609375
+        ],
+        [
+          527.1328125,
+          103.1522216796875
+        ],
+        [
+          84.8671875,
+          103.1522216796875
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          184
+        ],
+        [
+          "Line",
+          87
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          490
+        ],
+        [
+          "Line",
+          144
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          151
+        ],
+        [
+          "Line",
+          62
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          185
+        ],
+        [
+          "Line",
+          77
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          131
+        ],
+        [
+          "Line",
+          49
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          340
+        ],
+        [
+          "Line",
+          114
+        ],
+        [
+          "ListItem",
+          14
+        ],
+        [
+          "Reference",
+          14
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          343
+        ],
+        [
+          "Line",
+          116
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          20
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          68
+        ],
+        [
+          "Line",
+          21
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          7
+        ],
+        [
+          "Line",
+          4
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          27
+        ],
+        [
+          "Line",
+          6
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          15
+        ],
+        [
+          "Line",
+          6
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          35
+        ],
+        [
+          "Line",
+          7
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/ECE8803-HaoyuXu KeyiHan Final report"
+}
