@@ -7,3 +7,11 @@ data/
 *.tiff
 models/
 data_simulated/
+__pycache__/
+*.pyc
+*.png
+*.pdf
+*.gif
+logs/
+data_simulated/
+Results/
