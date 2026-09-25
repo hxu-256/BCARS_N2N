@@ -68,12 +68,13 @@ supplementary material.
 
 ## Environment
 
-Training and inference ran in a GPU container built on `nvidia/cuda` 12.8 / Ubuntu 24.04 with
-Python 3.11.13. `requirements.txt` pins the packages that matter (csbdeep 0.8.1, TensorFlow
-2.21-dev, Keras 3.12-dev, numpy 2.3.3). The deep-learning stack came from nightly builds, so
-substitute the nearest stable release if a pinned version is gone — nothing here relies on a
-nightly-only feature. A GPU is strongly recommended for training; inference on one cube takes
-minutes.
+Python 3.11 with `csbdeep`, TensorFlow, numpy, scipy, h5py, tifffile and matplotlib — see
+`requirements.txt`. Any TensorFlow build with working GPU support for your card will do.
+
+The paper's runs used a CUDA 12.8 container with nightly TensorFlow and Keras builds, needed
+only because the RTX 50-series (Blackwell, sm_120) had no stock TensorFlow wheel with GPU
+support at the time. On other hardware, install the stock releases. A GPU is strongly
+recommended for training; inference on one cube takes minutes.
 
 ## Related
 

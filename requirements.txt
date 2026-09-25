@@ -1,16 +1,19 @@
-# Versions from the GPU container used for the paper's N2N runs
-# (locally built image "pytorch-tensorflow-gpu", nvidia/cuda 12.8 + Ubuntu 24.04,
-#  built 2025-09-19). Python 3.11.13.
+# N2N training/inference dependencies.
 #
-# NOTE: the deep-learning stack was installed from nightly builds, which are
-# eventually removed from their indexes. Pin the nearest stable release if the
-# exact version below is no longer downloadable; nothing here depends on a
-# nightly-only feature.
-csbdeep==0.8.1
-tf_nightly==2.21.0.dev20250916      # stable equivalent: tensorflow~=2.20
-keras-nightly==3.12.0.dev2025091903 # stable equivalent: keras~=3.11
-numpy==2.3.3
-scipy==1.16.2
-h5py==3.14.0
-tifffile==2025.10.4
-matplotlib==3.10.6
+# On most GPUs the stock releases are fine:
+csbdeep>=0.8
+tensorflow>=2.16        # any build with GPU support for your card
+numpy
+scipy
+h5py
+tifffile
+matplotlib
+#
+# On RTX 50-series (Blackwell, sm_120) there was no stock TensorFlow wheel with
+# working GPU support at the time of writing, so the paper's runs used a CUDA 12.8
+# container with nightly builds:
+#     Python 3.11.13 · csbdeep 0.8.1 · tf_nightly 2.21.0.dev20250916
+#     keras-nightly 3.12.0.dev2025091903 · numpy 2.3.3 · scipy 1.16.2
+#     h5py 3.14.0 · tifffile 2025.10.4 · matplotlib 3.10.6
+# Nothing in this repository depends on a nightly-only feature; the nightly stack
+# was purely to get the GPU recognized.
