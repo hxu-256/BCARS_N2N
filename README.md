@@ -13,7 +13,7 @@ The underlying idea is Noise2Noise (Lehtinen et al., *ICML* 2018). Generating th
 views by permuting odd and even spectral frames of a single hyperspectral stack follows
 **SPEND** (Ding et al., *Newton* **1**, 100195, 2025, doi:10.1016/j.newton.2025.100195), which
 introduced it for stimulated Raman and mid-infrared photothermal imaging. We reimplement that
-scheme on CSBDeep for BCARS; **no SPEND code is used here**.
+scheme on CSBDeep for BCARS.
 
 ## Idea
 
@@ -52,13 +52,6 @@ sees ~400 epochs in total. The model is written to `models/<name>/`.
 **3. Inference** (`testing_demo_simulated.ipynb`). Loads a model by name, predicts each
 held-out cube, and saves `n2n_restored_<cube>.npz` with the `restored` array next to the input.
 
-## Model weights
-
-**The trained weights are not available.** They were lost with the training container, and
-`models/` is untracked. The configuration above is enough to retrain, but retrained weights
-will not reproduce the paper's N2N numbers exactly. The denoised cubes the paper reports are
-deposited at [Zenodo DOI].
-
 ## Scope
 
 `testing_demo.ipynb` runs inference on the experimental cubes (glycerol, bead, *C. elegans*),
@@ -72,16 +65,4 @@ Python 3.11 with `csbdeep`, TensorFlow, numpy, scipy, h5py, tifffile and matplot
 `requirements.txt`. Any TensorFlow build with working GPU support for your card will do.
 
 The paper's runs used the [`dconsorte/pytorch-tensorflow-gpu`](https://github.com/dconsorte/pytorch-tensorflow-gpu)
-Docker image (CUDA 12.8, Python 3.11, Ubuntu 24.04), needed only because the RTX 50-series
-(Blackwell, sm_120) had no stock TensorFlow wheel with working GPU support at the time.
-
-## Related
-
-- Processing pipeline (VST, detrending, CCV, phase retrieval) and the paper's metrics:
-  [pipeline repo URL]
-- Data and per-method results: [Zenodo DOI]
-
-## Citation
-
-Please cite the paper above, along with CSBDeep/CARE (Weigert et al. 2018) and Noise2Noise
-(Lehtinen et al. 2018).
+Docker image (CUDA 12.8, Python 3.11, Ubuntu 24.04).
