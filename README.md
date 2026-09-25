@@ -71,10 +71,13 @@ supplementary material.
 Python 3.11 with `csbdeep`, TensorFlow, numpy, scipy, h5py, tifffile and matplotlib — see
 `requirements.txt`. Any TensorFlow build with working GPU support for your card will do.
 
-The paper's runs used a CUDA 12.8 container with nightly TensorFlow and Keras builds, needed
-only because the RTX 50-series (Blackwell, sm_120) had no stock TensorFlow wheel with GPU
-support at the time. On other hardware, install the stock releases. A GPU is strongly
-recommended for training; inference on one cube takes minutes.
+The paper's runs were done inside a Docker image, `pytorch-tensorflow-gpu:latest` (built
+2025-09-19 on `nvidia/cuda` 12.8 / Ubuntu 24.04, image label: "PyTorch and TensorFlow with GPU
+support for modern NVIDIA GPUs including Blackwell", maintainer Dennis Consorte). It ships
+nightly TensorFlow and Keras builds, which were needed only because the RTX 50-series
+(Blackwell, sm_120) had no stock TensorFlow wheel with working GPU support at the time. On
+other hardware, install the stock releases instead. A GPU is strongly recommended for
+training; inference on one cube takes minutes.
 
 ## Related
 
