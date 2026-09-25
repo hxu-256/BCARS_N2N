@@ -6,10 +6,14 @@ benchmark* ([journal], [year]).
 
 Built on **[CSBDeep / CARE](https://github.com/CSBDeep/CSBDeep)** (Weigert et al., *Nat.
 Methods* 2018, MPI-CBG Dresden): the 3-D U-Net, training loop and `CARE` model API come from
-CSBDeep. This repository adds the BCARS data generation, the odd/even spectral split, and the
-training and inference entry points. The Noise2Noise principle is Lehtinen et al., *ICML*
-2018; the odd/even spectral-channel construction for hyperspectral coherent Raman follows the
-SPEND application of N2N.
+CSBDeep, and this repository adds the BCARS data generation, the odd/even spectral split and
+the training and inference entry points.
+
+The underlying idea is Noise2Noise (Lehtinen et al., *ICML* 2018). Generating the two noisy
+views by permuting odd and even spectral frames of a single hyperspectral stack follows
+**SPEND** (Ding et al., *Newton* **1**, 100195, 2025, doi:10.1016/j.newton.2025.100195), which
+introduced it for stimulated Raman and mid-infrared photothermal imaging. We reimplement that
+scheme on CSBDeep for BCARS; **no SPEND code is used here**.
 
 ## Idea
 
@@ -26,6 +30,8 @@ datagen.py                    simulated cubes (generate_bcars.py .npz) -> traini
 utils/datagen.py              odd/even split, patch extraction, augmentation (create_spend_patches)
 training_demo.ipynb           trains the model used for the paper's simulated results
 testing_demo_simulated.ipynb  applies it to the held-out simulated cubes -> n2n_restored_*.npz
+testing_demo.ipynb            inference on the experimental cubes -> raw/denoised/wn .npz
+requirements.txt              package versions used for the paper
 ```
 
 ## Workflow
@@ -55,14 +61,19 @@ deposited at [Zenodo DOI].
 
 ## Scope
 
-This repository covers the **simulated** N2N results. The experimental cubes (glycerol, bead,
-*C. elegans*) were denoised with a separate model trained outside this repository; its outputs
-are in the Zenodo deposit and its settings are in the paper's supplementary material.
+`testing_demo.ipynb` runs inference on the experimental cubes (glycerol, bead, *C. elegans*),
+but the model it loads was trained outside this repository, so no training notebook for it is
+included. Its outputs are in the Zenodo deposit and its settings are in the paper's
+supplementary material.
 
 ## Environment
 
-Python 3.11, TensorFlow 2.x, `csbdeep`, `numpy`, `matplotlib`, `tifffile`. A GPU is strongly
-recommended for training; inference on one cube takes minutes.
+Training and inference ran in a GPU container built on `nvidia/cuda` 12.8 / Ubuntu 24.04 with
+Python 3.11.13. `requirements.txt` pins the packages that matter (csbdeep 0.8.1, TensorFlow
+2.21-dev, Keras 3.12-dev, numpy 2.3.3). The deep-learning stack came from nightly builds, so
+substitute the nearest stable release if a pinned version is gone — nothing here relies on a
+nightly-only feature. A GPU is strongly recommended for training; inference on one cube takes
+minutes.
 
 ## Related
 
